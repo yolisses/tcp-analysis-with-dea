@@ -1,0 +1,44 @@
+This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking www.labredes.br (be patient)
+
+
+Server Software:        nginx/1.18.0
+Server Hostname:        www.labredes.br
+Server Port:            443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+
+Document Path:          /index.html
+Document Length:        100 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   30.376 seconds
+Complete requests:      20000
+Failed requests:        352
+   (Connect: 0, Receive: 0, Length: 352, Exceptions: 0)
+Total transferred:      6819659 bytes
+HTML transferred:       1999900 bytes
+Requests per second:    658.42 [#/sec] (mean)
+Time per request:       1518.790 [ms] (mean)
+Time per request:       1.519 [ms] (mean, across all concurrent requests)
+Transfer rate:          219.25 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0 1218 713.3   1084    3013
+Processing:    29  248 126.3    235    1851
+Waiting:        2  152 125.0    121    1840
+Total:         93 1466 791.5   1321    3513
+
+Percentage of the requests served within a certain time (ms)
+  50%   1321
+  66%   1733
+  75%   1932
+  80%   2041
+  90%   2649
+  95%   2919
+  98%   3334
+  99%   3408
+ 100%   3513 (longest request)
