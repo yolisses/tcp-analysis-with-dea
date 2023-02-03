@@ -22,9 +22,12 @@ efficiencies = sdea(inputs, outputs, RTS="CRS", ORIENTATION="in")$eff
 bestDMU = which.max(efficiencies)
 worstDMU = which.min(efficiencies)
 
+sorted = sort(efficiencies, index.return = TRUE, decreasing=TRUE)
+results = cbind(names[sorted$ix],sorted$x)
+
 names = data[["dmu"]]
 message("A DMU mais eficiente: ", names[bestDMU])
 message("A DMU menos eficiente: ", names[worstDMU])
 
 # dea.plot(inputs,outputs,RTS="crs",ORIENTATION="in");
-# write.csv(efficiencies, file='efficiencies.csv')
+write.csv(results, file='efficiencies.csv')
